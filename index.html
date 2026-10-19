@@ -1,1 +1,413 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Luis Fernando López Robles, enfocado en ingeniería, tecnología y soluciones industriales.">
+    <title>Luis Fernando López Robles | Portafolio</title>
+
+    <style>
+        :root {
+            --fondo: #0b1120;
+            --superficie: #121c2e;
+            --texto: #edf2f7;
+            --secundario: #a4b2c7;
+            --acento: #55d6be;
+            --borde: #28364b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            background: var(--fondo);
+            color: var(--texto);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--acento);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contenedor {
+            width: min(1080px, 90%);
+            margin: auto;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(11, 17, 32, 0.95);
+            border-bottom: 1px solid var(--borde);
+        }
+
+        nav {
+            min-height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            color: var(--texto);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+
+        .menu a {
+            color: var(--secundario);
+        }
+
+        .hero {
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .etiqueta {
+            color: var(--acento);
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        h1 {
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            line-height: 1.12;
+            margin: 18px 0;
+            max-width: 850px;
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: var(--secundario);
+            font-size: 1.1rem;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 26px;
+            padding: 11px 19px;
+            background: var(--acento);
+            color: #07151a;
+            font-weight: bold;
+            border-radius: 7px;
+        }
+
+        section {
+            padding: 70px 0;
+            border-top: 1px solid var(--borde);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .introduccion {
+            color: var(--secundario);
+            max-width: 700px;
+            margin-bottom: 28px;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .tarjeta {
+            background: var(--superficie);
+            border: 1px solid var(--borde);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .tarjeta h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .tarjeta p,
+        .tarjeta li {
+            color: var(--secundario);
+        }
+
+        .tarjeta ul {
+            padding-left: 20px;
+        }
+
+        .habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .habilidad {
+            padding: 9px 15px;
+            border: 1px solid var(--borde);
+            border-radius: 7px;
+            background: var(--superficie);
+        }
+
+        .pendiente {
+            color: var(--acento);
+            font-size: 0.85rem;
+            margin-top: 14px;
+        }
+
+        footer {
+            padding: 28px 0;
+            text-align: center;
+            color: var(--secundario);
+            border-top: 1px solid var(--borde);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 16px 0;
+            }
+
+            .menu {
+                gap: 12px;
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="contenedor">
+            <a class="logo" href="#inicio">LF · Portafolio</a>
+
+            <div class="menu">
+                <a href="#perfil">Perfil</a>
+                <a href="#educacion">Educación</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#blog">Blog</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero contenedor" id="inicio">
+            <span class="etiqueta">Ingeniería · Tecnología · Industria</span>
+
+            <h1>Luis Fernando<br>López Robles</h1>
+
+            <p>
+                Orientado a crear y dirigir una empresa de soluciones
+                tecnológicas e industriales, integrando conocimientos
+                de ingeniería, programación y gestión de sistemas.
+            </p>
+
+            <a class="boton" href="#proyectos">Explorar proyectos</a>
+        </section>
+
+        <section id="perfil">
+            <div class="contenedor">
+                <h2>Perfil profesional</h2>
+
+                <p class="introduccion">
+                    Mi formación en ingeniería y mi interés por la
+                    tecnología están orientados al desarrollo de
+                    soluciones que respondan a necesidades reales de
+                    las organizaciones y los procesos industriales.
+                </p>
+
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <h3>Objetivo profesional</h3>
+                        <p>
+                            Crear y dirigir una empresa dedicada a
+                            desarrollar soluciones tecnológicas e
+                            industriales.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Áreas de interés</h3>
+                        <p>
+                            Desarrollo de software, administración de
+                            bases de datos y aplicación de tecnología
+                            a procesos empresariales e industriales.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="educacion">
+            <div class="contenedor">
+                <h2>Educación</h2>
+                <p class="introduccion">
+                    Formación académica en ingeniería y sistemas.
+                </p>
+
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <h3>Ingeniería Industrial y de Sistemas</h3>
+                        <p>
+                            Formación orientada a sistemas, procesos
+                            y operaciones industriales.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Ingeniería en Sistemas de Información</h3>
+                        <p>
+                            Formación relacionada con sistemas de
+                            información y tecnologías computacionales.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <div class="contenedor">
+                <h2>Habilidades técnicas</h2>
+                <p class="introduccion">
+                    Tecnologías utilizadas en mi formación y en
+                    mis proyectos académicos.
+                </p>
+
+                <div class="habilidades">
+                    <span class="habilidad">Java</span>
+                    <span class="habilidad">C#</span>
+                    <span class="habilidad">SQL</span>
+                </div>
+
+                <p class="introduccion" style="margin-top: 24px;">
+                    Habilidades sociales y otros conocimientos:
+                    completar con las competencias que pueda
+                    acreditar mediante formación o experiencia.
+                </p>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <div class="contenedor">
+                <h2>Proyectos</h2>
+                <p class="introduccion">
+                    Trabajos académicos y desarrollos relacionados
+                    con programación y administración de datos.
+                </p>
+
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <h3>Actualización de un sistema para administrar bases de datos</h3>
+                        <p>
+                            Proyecto académico enfocado en la
+                            actualización de un sistema para la
+                            administración de bases de datos.
+                        </p>
+
+                        <p class="pendiente">
+                            Pendiente: agregar el enlace al repositorio
+                            y las tecnologías específicas utilizadas.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="contenedor">
+                <h2>Blog técnico</h2>
+                <p class="introduccion">
+                    Documentación de proyectos que requieren
+                    explicar el problema, la solución y sus resultados.
+                </p>
+
+                <article class="tarjeta">
+                    <h3>Actualización de un sistema para administrar bases de datos</h3>
+
+                    <h4>1. Descripción</h4>
+                    <p>
+                        Documentar el sistema original, su propósito
+                        y el alcance de la actualización realizada.
+                    </p>
+
+                    <h4>2. Requerimientos del cliente</h4>
+                    <p>
+                        Registrar las necesidades y condiciones
+                        solicitadas para el sistema.
+                    </p>
+
+                    <h4>3. Diseño de la solución</h4>
+                    <p>
+                        Explicar la estructura propuesta, las decisiones
+                        técnicas y el diseño de la base de datos.
+                    </p>
+
+                    <h4>4. Implementación de la solución</h4>
+                    <p>
+                        Describir los cambios realizados, las
+                        herramientas utilizadas y las pruebas efectuadas.
+                    </p>
+
+                    <h4>5. Resultado</h4>
+                    <p>
+                        Documentar los resultados comprobados,
+                        las pruebas y los objetivos alcanzados.
+                    </p>
+
+                    <p class="pendiente">
+                        Completar cada apartado con los datos reales
+                        del proyecto antes de entregar la actividad.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p>Luis Fernando López Robles · Portafolio profesional</p>
+            <p>GitHub Pages</p>
+        </div>
+    </footer>
+</body>
+</html>
